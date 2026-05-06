@@ -1,0 +1,155 @@
+# --- Компилированные файлы ---
+*.o
+*.ko
+*.obj
+*.elf
+
+# --- Исполняемые и бинарные ---
+*.exe
+*.out
+*.bin
+*.app/
+
+# --- Библиотеки ---
+*.a
+*.lib
+*.la
+*.lai
+*.lo
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# --- Отладка и профилирование ---
+*.pdb
+*.idb
+*.ilk
+*.map
+*.dSYM/
+*.drc
+
+# --- Предкомпилированные заголовки ---
+*.gch
+*.pch
+
+# --- Модули Fortran (если используются) ---
+*.mod
+*.smod
+
+# --- Временные и резервные файлы ---
+*~
+*.bak
+*.backup
+*.old
+
+# --- Файлы редакторов и IDE ---
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+ipch/
+
+# CLion / IntelliJ
+.idea/
+cmake-build-*/
+
+# Eclipse
+.cproject
+.project
+.settings/
+
+# Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# Emacs
+*~
+\#*\#
+.dir-locals.el
+
+# Sublime Text
+*.sublime-workspace
+
+# Atom
+.atom-build.json
+.tags*
+
+# Neovim
+.nvim
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.*.swp
+.*.swo
+*~
+
+# --- Каталоги сборки ---
+build/
+build-*/
+bin/
+obj/
+dist/
+out/
+x64/
+x86/
+Debug/
+Release/
+
+# --- Кэш и вспомогательные файлы ---
+*.cache
+*.log
+*.tlog
+*.iobj
+*.ipdb
+
+# --- Зависимости и пакеты ---
+vendor/
+deps/
+
+# CMake
+CmakeLists.txt
+CmakePresets.json
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+*.cmake
+
+# Каталоги сборки CMake
+build/
+build-*/
+cmake-build-*/
+_build/
+
+# Ninja
+.ninja_log
+.ninja_deps
+
+# CTest
+CTestTestfile.cmake
+CTestConfiguration.ini
+
+# Doxygen
+doc/html/
+doc/latex/
+doc/rtf/
+
+.qtcreator/
+main.cpp.autosave
