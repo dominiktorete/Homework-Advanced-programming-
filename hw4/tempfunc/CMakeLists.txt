@@ -13,7 +13,6 @@ FetchContent_Declare(
 )
 
 FetchContent_MakeAvailable(Catch2)
-
 add_executable(Advanced_programming tempfunc.cpp)
 target_link_libraries(Advanced_programming Catch2::Catch2WithMain)
 include(GNUInstallDirs)
