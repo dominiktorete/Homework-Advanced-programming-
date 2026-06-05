@@ -7,12 +7,12 @@ public:
     big_integer(const std::string& str){
         numb = str;
     }
-    big_integer(big_integer&& numb_other){
+    big_integer(big_integer&& numb_other)noexcept{
         numb = numb_other.numb;
         numb_other.numb = "";
     }
-    big_integer& operator = (big_integer&& numb_other){
-        if(this != &numb_other) return numb_other;
+    big_integer& operator = (big_integer&& numb_other)noexcept{
+        if(this == &numb_other) return *this ;
         numb = numb_other.numb;
         numb_other.numb = "";
         return *this;
@@ -58,6 +58,7 @@ public:
 
             }
         }
+        if(in_mind > 0)temp.push_back(static_cast<char>(in_mind + '0'));
         std::reverse(temp.begin(), temp.end());
         return std::move(big_integer(temp));
     }
@@ -134,6 +135,9 @@ public:
         std::reverse(res_int.begin(), res_int.end());
         return std::move(big_integer(res_int));
     }
+    big_integer operator * (const int& numb_other){
+        return (*this * big_integer(std::to_string(numb_other)));
+    }
     friend std::ostream& operator << (std::ostream& out, const big_integer& integer){
         out << integer.numb << std::endl;
         return out;
@@ -142,12 +146,15 @@ public:
 
 int main()
 {
-    auto number1 = big_integer("114575");
-    auto number2 = big_integer("78524");
+    auto number1 = big_integer("112431243");
+    auto number2 = big_integer("232342");
     auto result = number1 + number2;
     std::cout << result; // 193099
     auto num1 = big_integer("12");
     auto num2 = big_integer("21");
     std::cout << num1*num2;
+
+    auto result2 = number1 * 2;
+    std::cout << result2;
     return 0;
 }
